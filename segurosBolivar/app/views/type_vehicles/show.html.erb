@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Moto:</strong>
+  <%= @type_vehicle.moto %>
+</p>
+
+<p>
+  <strong>Particulartourism:</strong>
+  <%= @type_vehicle.particularTourism %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @type_vehicle.bus %>
+</p>
+
+<p>
+  <strong>Furgon:</strong>
+  <%= @type_vehicle.furgon %>
+</p>
+
+<%= link_to 'Edit', edit_type_vehicle_path(@type_vehicle) %> |
+<%= link_to 'Back', type_vehicles_path %>

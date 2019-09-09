@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Basic:</strong>
+  <%= @insurance_policy.basic %>
+</p>
+
+<p>
+  <strong>Standard:</strong>
+  <%= @insurance_policy.standard %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @insurance_policy.premium %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_policy_path(@insurance_policy) %> |
+<%= link_to 'Back', insurance_policies_path %>

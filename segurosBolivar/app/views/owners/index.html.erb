@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Owners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Identification</th>
+      <th>Phonenumber</th>
+      <th>Residenceaddress</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr>
+        <td><%= owner.name %></td>
+        <td><%= owner.identification %></td>
+        <td><%= owner.phoneNumber %></td>
+        <td><%= owner.residenceAddress %></td>
+        <td><%= owner.email %></td>
+        <td><%= link_to 'Show', owner %></td>
+        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Owner', new_owner_path %>

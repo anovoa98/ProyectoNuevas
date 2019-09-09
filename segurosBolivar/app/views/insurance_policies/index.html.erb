@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Insurance Policies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Basic</th>
+      <th>Standard</th>
+      <th>Premium</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insurance_policies.each do |insurance_policy| %>
+      <tr>
+        <td><%= insurance_policy.basic %></td>
+        <td><%= insurance_policy.standard %></td>
+        <td><%= insurance_policy.premium %></td>
+        <td><%= link_to 'Show', insurance_policy %></td>
+        <td><%= link_to 'Edit', edit_insurance_policy_path(insurance_policy) %></td>
+        <td><%= link_to 'Destroy', insurance_policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insurance Policy', new_insurance_policy_path %>
